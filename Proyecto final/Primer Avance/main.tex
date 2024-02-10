@@ -1,0 +1,295 @@
+
+\documentclass[journal]{IEEEtran}
+\usepackage[usenames]{color}
+\usepackage{epsfig}
+\usepackage{graphics}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{cite}
+\usepackage{array}
+\usepackage{pslatex} 
+\usepackage{url}
+\usepackage{lineno}
+\usepackage{graphicx}  % Written by David Carlisle and Sebastian Rahtz
+\usepackage{setspace}
+\usepackage{tikz}
+\usepackage{hhline}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,top=0.7in,bmargin=0.7in,lmargin=0.65in,rmargin=0.65in}
+\setlength{\headheight}{17pt}
+\setlength{\headsep}{5pt}
+%\captionsetup{labelfont={up},font=small}
+\captionsetup[figure]{name={Fig.},labelsep=period,font=small}
+\captionsetup[table]{name={TABLE},labelsep=period,font=small}
+
+\pagenumbering{gobble} 
+ \newcommand{\flogo}{\includegraphics[height=18pt]{embLogo.eps}
+ }
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{\leftmark}
+\pagestyle{fancyplain}
+\fancyhead[R]{\includegraphics[width=0.7cm]{CELMEX.png}}
+\begin{document}
+
+\title{\vspace{0.5cm}\textcolor{black}{Web development framework\\ PROJECT PROGRESS\\\vspace{0.25cm}}}
+\author{
+   \textbf{CELMEX}\\
+    \textbf{Armas Jimenez David Alonso}\\
+    \textbf{Castro Soberanes Luis Alexis}\\
+    \textbf{Pulido Larios Cristopher}\\
+    \textbf{Reyes Torres Oscar Manuel}\\
+    \vspace{0.5cm}
+    Technological University of Tijuana.\\ 
+    TSU. Information technology.\\ 
+    Virtual environments and digital businesses.\\ 
+    Teacher: DR. Parra Galaviz Ray Brunett.
+}
+
+
+\maketitle\thispagestyle{fancy}
+\IEEEpeerreviewmaketitle
+
+\section{INTRODUCTION}
+
+\IEEEPARstart{I}{n}  the development of this software design and development project, it is essential to have tools that allow each aspect of the system to be clearly and precisely visualized and structured. These tools include mockups, wireframes, flowcharts, entity-relationship diagrams, and data dictionaries, which play specific roles in the design and development process.
+
+\section{Functional Requirements:}
+Home: \\
+FR1: The homepage must display an overview of the store and its products or services. \\
+FR2: There should be a carousel of images or a featured banner on the homepage that showcases special offers or featured products. \\
+FR3: It must include a clear navigation bar with links to other sections of the website. \\
+FR4: It should display links to the company's social media accounts to allow users to share content. \\
+
+Contact: \\
+FR5: There must be a "Contact" page that includes a contact form for users to submit email inquiries. \\
+FR6: It must provide a physical address for the company and a phone number for further inquiries. \\
+FR7: It should include an interactive map showing the company's location. \\
+
+About Us: 
+FR8: There should be an "About Us" section that provides information about the company, its history, mission, and team. \\
+FR9: It must include photos or biographies of the executive team. \\
+FR10: It should display any relevant certifications or accolades the company has received. \\
+
+Cart: \\
+FR11: It must allow users to add products to the shopping cart. \\
+FR12: It should display a list of products in the cart, including images, names, and prices. \\
+FR13: It must allow users to modify the quantity of products in the cart or remove products. \\
+FR14: It should automatically calculate the subtotal and total purchase amount. FR15: It must allow users to proceed to the checkout process from the cart. \\
+
+Shop: \\
+FR16: It should display a list of product categories so users can browse and select specific categories. \\
+FR17: It must display a list of products within each category, including images, names, and prices. \\
+FR18: It should allow users to view the details of an individual product by clicking on it. \\
+FR19: It must allow users to add products to the cart from the product details page. \\
+FR20: It should provide filtering and search options to help users find specific products.\\
+
+\newpage
+
+\section{DIAGRAMS}
+
+\subsection{Entity relationship diagram}
+Entity relationship diagram: telephony is a graphical representation that shows the entities (important objects or concepts) and the relationships between them in a system or database related to telephony management. In this diagram, entities can be things like customers, phone numbers, service plans, mobile devices, invoices, etc., and relationships describe how these entities interact with each other. These diagrams are useful for designing and understanding the structure of the database used in the management of telephony services, which facilitates the organization and analysis of information related to Celmex telephony. 
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=0.8\columnwidth, height=1.8\columnwidth]{ERD.jpeg}
+    \caption{ERD}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{Relational model}
+We took this model from the DER to have management and know where the project and the website are going. relational telephony model, each table would contain rows of data representing specific records of those entities and columns representing the attributes or characteristics of those entities. For example, a "Customers" table might have columns for customer name, address, contact phone number, while an "Invoices" table might include columns for invoice number, issue date, and total to date Pay.
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=0.8\columnwidth, height=2.1\columnwidth]{RM.png}
+    \caption{RM}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{Use Case Diagram: }
+In the use case diagram, we would represent how the actors (e.g., “Customer” and “Service Representative”) interact with the system. Here are some possible use cases: 
+ 
+Register Client: \\
+Actor: Service Representative Description: The service representative registers a new customer in the system. \\
+Update Customer Information: \\
+Actor: Client \\
+Description: The customer can update their personal information, such as address and telephone number. Check Connection Status:\\
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=1\columnwidth, height=1.8\columnwidth]{UCD.jpeg}
+    \caption{UCD}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{Sequence Case Diagram:}
+The "Customer" actor selects a phone number in its interface (for example, a mobile application).\\
+The customer then requests the system for the connection status of that phone number. \\
+The system processes the request and returns the connection status to the client. \\
+This is a simplified example, but usage sequence diagrams can represent more complex and detailed interactions between actors and objects in the system for each specific use case. Each use case would have its own use sequence diagram to show how the interaction takes place in that scenario.
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=1\columnwidth, height=2\columnwidth]{DS.png}
+    \caption{DS}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{The Flowchart}
+The "Customer" actor selects a phone number in its interface (for example, a mobile application). \\
+The customer then requests the system for the connection status of that phone number. \\
+The system processes the request and returns the connection status to the client. \\
+This is a simplified example, but usage sequence diagrams can represent more complex and detailed interactions between actors and objects in the system for each specific use case. Each use case would have its own use sequence diagram to show how the interaction takes place in that scenario.
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=1\columnwidth, height=2\columnwidth]{FC.jpeg}
+    \caption{FC}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{Class Diagrama}
+
+In the dynamic world of telephone and accessories commerce, a class diagram becomes an essential tool for organizing and understanding the relationships between key entities:
+Customer and User: Represent buyers and users, where the Customer is distinguished as a type of User, reflecting those who make purchases.\\
+Administrator: Plays a critical role in site management, overseeing product availability and order management.\\
+Shipping Information: This entity becomes vitally important to guarantee the effective delivery of devices and accessories to customers.\\
+Order and Shopping Cart: These entities are the heart of the purchasing process, allowing customers to add products to their cart and ultimately complete orders.\\
+The class diagram not only makes it easy to visualize the relationships between these entities, but also helps define the specific attributes of each one. In this context, it becomes a powerful tool to maintain clarity and efficiency in data management, resulting in an optimized user experience and more effective operation in the online phone and accessories business.
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=1.3\columnwidth, height=1.5\columnwidth]{CD.jpeg}
+    \caption{CD}
+    \label{fig:ejemplo}
+\end{figure}
+
+\section{Wireframes}
+
+\subsection{HOME}
+
+In my wireframes, I was assigned the task of developing the home section, and for this I was inspired by various telephony website designs. My approach was to create a design that was easy to navigate and not overwhelming for users. At the top, I have incorporated a series of squares that function as buttons. These squares represent the key sections of the website, with the aim of providing customers with an accessible overview of the different areas of the site. Below, we have included information about our social networks and placed a relevant image to enrich the context of the home page. Additionally, in strategically located circles, you will find the logos of our social networks, which will make it easier for our customers to connect with us on various platforms. To conclude, I have implemented a footer that displays our social networks prominently, giving our visitors a quick and convenient way to access our social media accounts.
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=0.8\columnwidth, height=1.7\columnwidth]{INICIO.jpeg}
+    \caption{HOME}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{SHOP}
+In this section, my wireframes are for the store, it is something simple and works as a store with everything it occupies and facilitating the user by creating the concepts of popular categories that have the majority of the web page. In the store section, add a rectangle with squares with the home bars store, us, contacts, service, blog and cart what every website should have for quick management of where the customer wants to go, also another rectangle at the bottom where the customer will choose the category to search more easily the product you want to buy at the top another rectangle another section with other squares with what will be the most popular products section and below the same with the section of the products that we handle and below the footer section with networks and regulations and privacy.
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=0.8\columnwidth, height=1.8\columnwidth]{TIENDA.jpeg}
+    \caption{SHOP}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{SHOPPING CAR}For the shopping cart wireframe, sections were added for the products In addition to adding a section for The purchase summary and types of Payment methods, we also add The card payment section.
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=1\columnwidth, height=2.2\columnwidth]{CARRITO.jpeg}
+    \caption{SHOPPING CAR }
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{CONTACT }
+In this skeleton of the wireframes in the contacts part I wanted to achieve a section where clients can send us their questions or problems in order to help and take into account the opinions to be able to improve, here I added the client data section with text boxes where They send us their data so we can solve their doubt or problem, and below, before the footer, text boxes where our company contacts and customer service will go, and finally the footer.
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=1\columnwidth, height=2\columnwidth]{CONTACTOS.jpeg}
+    \caption{CONTACT  }
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{BLOG}
+In this part of the blog I also based myself on some designs from other telephone brands, I wanted to focus on the news being divided into sections, thus putting sections to make the section look more attractive
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=0.8\columnwidth, height=2.2\columnwidth]{BLOG.jpeg}
+    \caption{BLOG  }
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{SERVICE}
+For this wireframe we use as a base Somwireframes seen previously, We add the different services that You can offer our system for Provide good service with quality
+
+\begin{figure}[h]
+    \centering
+ \includegraphics[width=0.8\columnwidth, height=2.31\columnwidth]{SERVICIOS.jpeg}
+    \caption{SERVICE}
+    \label{fig:ejemplo}
+\end{figure}
+
+\section{MOCKS UP}
+The wireframes are based on the mockups, therefore we will only add the images of these.
+
+\subsection{HOME}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\columnwidth, height=2.3\columnwidth]{INICIOM.jpeg}
+    \caption{HOMEM}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{SHOP}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\columnwidth, height=2.31\columnwidth]{TIENDAM.png}
+    \caption{SHOPM}
+    \label{fig:ejemplo}
+\end{figure}
+\newpage
+
+\subsection{SHOPPING CART}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\columnwidth, height=2.3\columnwidth]{CARRITOM.jpeg}
+    \caption{SHOPPING CARTM}
+    \label{fig:ejemplo}
+\end{figure}
+
+\newpage
+\subsection{CONTACT}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\columnwidth, height=2.3\columnwidth]{CONTACTOSM.png}
+    \caption{CONTACTM}
+    \label{fig:ejemplo}
+\end{figure}
+
+\newpage
+\subsection{BLOG}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\columnwidth, height=2.3\columnwidth]{BLOGM.jpeg}
+    \caption{BLOGM}
+    \label{fig:ejemplo}
+\end{figure}
+
+\newpage
+\subsection{SERVICE}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\columnwidth, height=2.31\columnwidth]{SERVICIOSM.jpeg}
+    \caption{SERVICEM}
+    \label{fig:ejemplo}
+\end{figure}
+
+
+\end{document}
+
