@@ -1,0 +1,17 @@
+/* AllTodosIdsAndUserIds.css */
+.todos-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .todos-table th,
+  .todos-table td {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    text-align: left;
+  }
+  
+  .todos-table th {
+    background-color: #f2f2f2;
+  }
+  

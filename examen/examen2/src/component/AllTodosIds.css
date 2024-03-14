@@ -1,0 +1,16 @@
+/* AllTodosIds.css */
+.todos-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .todos-table th, .todos-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .todos-table th {
+    background-color: #f2f2f2;
+  }
+  
